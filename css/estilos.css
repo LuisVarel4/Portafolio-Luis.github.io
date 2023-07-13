@@ -1,59 +1,4 @@
-
-.fondo{
-  
-  position: relative;
-  border: #e60064 5px solid; /* Borde del div */
-  background-image: linear-gradient(40deg,#00df4e,#7000ff 66.15%,#e700b7);
-}
-
-.caja-titulo{
-  font-size: 30px; 
-  position: relative;
-  background-image: linear-gradient(45deg ,#ff7a7a,#007d89 66.15%,#00e727);
-}
-.cajas-contenido{
-  font-size: 20px; 
-  position: relative;
-  background-image: linear-gradient(45deg ,#ff7a7a,#007d89 66.15%,#00e727);
-}
-
 .botonsito{
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  visibility: inherit;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  box-sizing: border-box;
-  line-height: inherit;
-  overflow: visible;
-  text-transform: none;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.915);
-  
-  margin: 0 2px;
-  cursor: pointer;
-  outline: none;
-  transition: color .2s ease-out;
-  display: inline-table;
-  position: flex;
-  justify-content: center;
-  background: linear-gradient(40deg,#080043ef,#280064ed 66.15%,#003b68ed);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  height: 47px;
-  width: 180px;
-  font-size: 16px;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  margin-bottom: 15px;
-  margin-left: 8%;
-}
-.botonsito2{
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   visibility: inherit;
@@ -88,20 +33,16 @@
   font-weight: 600;
   margin-bottom: 15px;
   margin-left: 8%;
+  transition: 0.5s ease;
 }
 
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-} */
 
 header {
   background-color: #020018f4;
   padding: 20px;
   text-align: center;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.915);
+  animation: flotar2 5s ease-in-out infinite;
 }
 
 .titulo {
@@ -130,6 +71,7 @@ header {
   text-align: center;
   background-color: #020013f4;
   border-radius: 8px 8px 0 0; /* Agrega un borde redondeado solo en la parte superior */
+  transition: ease-in-out 0.4s;
 }
 
 .cuadro {
@@ -140,10 +82,25 @@ header {
   background-color: #afafafd9;
   border-radius: 8px;
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.876);
-  margin: 10px;
+  margin: 30px;
   width: 300px;
+  animation: flotar 5s ease-in-out infinite;
+  transition: 0.5s ease-in-out;
 }
-
+.cuadro:hover{
+  box-shadow: 0 12px 14px rgba(28, 3, 71, 0.911);
+  background-color: #d1d1d1e9;
+  .subtitulo {
+    color: #ededfc;
+    box-shadow: 0 4px 4px rgba(24, 3, 67, 0.911);
+    font-size: 24.5px;
+    margin: 0;
+    padding: 20px; 
+    text-align: center;
+    background-color: #120022f4;
+    border-radius: 8px 8px 0 0; 
+  }
+}
 
 .lista-repositorios li,
 .lista-redes li{
@@ -1476,7 +1433,7 @@ audio::-webkit-media-controls-panel {
   background-color: #130038ce; 
   
 }
-.botonsito3{
+.botonsito-musica{
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   visibility: inherit;
@@ -1512,14 +1469,48 @@ audio::-webkit-media-controls-panel {
   font-weight: 600;
   margin-bottom: 15px;
   margin-left: 8%;
+  transition: 0.5s ease;
 }
-.botonsito:hover{
-  box-shadow: 0 5px 5px rgba(125, 125, 0, 0.915);
 
-}
-.botonsito2:hover{
+.botonsito:hover{
+  transform: translateY(-5px);
   box-shadow: 0 5px 5px rgba(125, 125, 0, 0.915);
+  background: linear-gradient(40deg,#c0ca00ef,#9b8900ed 66.15%,#b59f00ed);
+  color: black;
 }
-.botonsito3:hover{
+.botonsito-musica:hover{
+  transform: translateY(-5px);
   box-shadow: 0 5px 5px rgba(125, 125, 0, 0.915);
+  background: linear-gradient(40deg,#c0ca00ef,#9b8900ed 66.15%,#b59f00ed);
+  color: black;
+}
+
+
+@keyframes flotar {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes flotar2{
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+.delay{
+  animation-delay: 0.5s;
+}
+.delay2{
+  animation-delay: 1s;
 }
