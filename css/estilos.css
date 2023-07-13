@@ -36,15 +36,72 @@
   margin-left: 8%;
   transition: 0.5s ease;
 }
+/* ---- musica --- */
+audio::-webkit-media-controls-panel {
+  background-color: #130038ce; 
+  
+}
+.botonsito-musica{
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  visibility: inherit;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  box-sizing: border-box;
+  line-height: inherit;
+  overflow: visible;
+  text-transform: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.915);
+  
+  margin: 0 2px;
+  cursor: pointer;
+  outline: none;
+  transition: color .2s ease-out;
+  display: inline-table;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(116.49deg,#3a0b54e3 ,#020021df 66.15%,#00004ded);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 47px;
+  width: 180px;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-left: 8%;
+  transition: 0.5s ease;
+}
 
+.botonsito:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px #00ff7b;
+  background: linear-gradient(40deg,#00ca83ef,#009b7fed 66.15%,#0094b5ed);
+  color: rgb(0, 18, 27);
+}
+.botonsito-musica:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px #00ff7b;
+  background: linear-gradient(40deg,#00ca83ef,#009b7fed 66.15%,#0094b5ed);
+  color: rgb(0, 18, 27);;
+}
 
 header {
-  background-color: #020018f4;
+  background: linear-gradient(60deg,#0e002ff4,#200044f4,#0e002ff4);
   padding: 20px;
   text-align: center;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.915);
+  box-shadow: 0 8px 8px rgb(0, 0, 0);
   animation: flotar2 5s ease-in-out infinite;
+  animation: cabecera-color 3s ease-in-out infinite;  
 }
+
 
 .titulo {
   color: #ffffff;
@@ -89,7 +146,7 @@ header {
   transition: 0.5s ease-in-out;
 }
 .cuadro:hover{
-  box-shadow: 0 12px 14px rgba(28, 3, 71, 0.911);
+  box-shadow: 0 14px 14px rgba(35, 4, 90, 0.911);
   background-color: #d1d1d1e9;
   .subtitulo {
     color: #ededfc;
@@ -98,7 +155,7 @@ header {
     margin: 0;
     padding: 20px; 
     text-align: center;
-    background-color: #120022f4;
+    background-color: #18002df4;
     border-radius: 8px 8px 0 0; 
   }
 }
@@ -117,17 +174,55 @@ header {
 html {
   height: 100%;
 }
-  
+
+body {
+  background-image: linear-gradient( #002024 ,#001229 , #20003e, #17001c);  
+}
+
 /* body {
   background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
   background-size: cover;
 } */
 
-body {
+/* body {
   background-image: url("../images/bosque.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
+} */
+
+.delay{
+  animation-delay: 0.5s;
 }
+.delay2{
+  animation-delay: 1s;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes flotar2{
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
+
+
+/* --------------- Luciernagas ------------- */
 
 .firefly {
   position: fixed;
@@ -155,7 +250,7 @@ body {
 .firefly::after {
   background: white;
   opacity: 0;
-  box-shadow: 0 0 0vw 0vw yellow;
+  box-shadow: 0 0 0vw 0vw #00ffff;
   animation: drift ease alternate infinite, flash ease infinite;
 }
 
@@ -1427,97 +1522,11 @@ body {
 @keyframes flash {
   0%, 30%, 100% {
     opacity: 0;
-    box-shadow: 0 0 0vw 0vw yellow;
+    box-shadow: 0 0 0vw 0vw #00ffff;
   }
   5% {
     opacity: 1;
-    box-shadow: 0 0 2vw 0.4vw yellow;
+    box-shadow: 0 0 2vw 0.4vw #00ffff;
   }
 }
 
-/* ---- musica --- */
-audio::-webkit-media-controls-panel {
-  background-color: #130038ce; 
-  
-}
-.botonsito-musica{
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  visibility: inherit;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  box-sizing: border-box;
-  line-height: inherit;
-  overflow: visible;
-  text-transform: none;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.915);
-  
-  margin: 0 2px;
-  cursor: pointer;
-  outline: none;
-  transition: color .2s ease-out;
-  display: inline-table;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(116.49deg,#3a0b54e3 ,#020021df 66.15%,#00004ded);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  height: 47px;
-  width: 180px;
-  font-size: 16px;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  margin-bottom: 15px;
-  margin-left: 8%;
-  transition: 0.5s ease;
-}
-
-.botonsito:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 5px 5px rgba(125, 125, 0, 0.915);
-  background: linear-gradient(40deg,#c0ca00ef,#9b8900ed 66.15%,#b59f00ed);
-  color: black;
-}
-.botonsito-musica:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 5px 5px rgba(125, 125, 0, 0.915);
-  background: linear-gradient(40deg,#c0ca00ef,#9b8900ed 66.15%,#b59f00ed);
-  color: black;
-}
-
-
-@keyframes flotar {
-  0% {
-    transform: translateY(-3px);
-  }
-  50% {
-    transform: translateY(3px);
-  }
-  100% {
-    transform: translateY(-3px);
-  }
-}
-@keyframes flotar2{
-  0% {
-    transform: translateY(-1px);
-  }
-  50% {
-    transform: translateY(1px);
-  }
-  100% {
-    transform: translateY(-1px);
-  }
-}
-.delay{
-  animation-delay: 0.5s;
-}
-.delay2{
-  animation-delay: 1s;
-}
